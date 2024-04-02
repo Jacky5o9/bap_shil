@@ -42,7 +42,13 @@ class UserController {
             notFound()
             return
         }
-
+        /**
+         * Gérer l'upload d'image (il faudra préalablement avoir fait un formulaire qui permettra d'uploader un fichier)
+         * - Récupérer l'illustration dans la requête
+         * - Sauvegarder le fichier sur le système de fichier (illustration.path)
+         * - Créer une instance d'Illustration qui pointera vers le fichier sauvegardé et qui lui attribuera un nom (aléatoire)
+         * - On ajoute la référence de l'instance d'Illustration à l'utilisateur avant de le sauvegarder
+          */
         try {
             userService.save(user)
         } catch (ValidationException e) {

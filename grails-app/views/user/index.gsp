@@ -49,7 +49,8 @@
                             <td>${user.weight}</td>
                             <td>${user.gender}</td>
                             <td><g:if test="${user.illustration}">
-                                <asset:image src="${user.illustration?.name}"/>
+%{--                                <asset:image src="${user.illustration?.name}"/>--}%
+                                <img src="${grailsApplication.config.illustration.url + user.illustration?.name}" />
                             </g:if>
                             </td>
                         </tr>

@@ -1,0 +1,8 @@
+server:
+  port: 8081
+illustration:
+  path: C:/Users/gregg/IdeaProjects/haiti_24_25/grails-app/assets/images/
+  url: http://localhost:8081/assets/
+#Illustration name : "grails.svg"
+#Accéder au fichier via le système de fichier (sauvegarde) : path + illustration.name
+#Accéder au fichier via l'interface réseau (lecture sur l'interface d'admin) : url + illustration.name
