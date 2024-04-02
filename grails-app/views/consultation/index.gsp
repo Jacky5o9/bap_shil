@@ -1,38 +1,34 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
-    <head>
-        <meta name="layout" content="main" />
-        <g:set var="entityName" value="${message(code: 'consultation.label', default: 'Consultation')}" />
-        <title><g:message code="default.list.label" args="[entityName]" /></title>
-    </head>
-    <body>
-    <div id="content" role="main">
-        <div class="container">
-            <section class="row">
-                <a href="#list-consultation" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-                <div class="nav" role="navigation">
-                    <ul>
-                        <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                        <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-                    </ul>
-                </div>
-            </section>
-            <section class="row">
-                <div id="list-consultation" class="col-12 content scaffold-list" role="main">
-                    <h1><g:message code="default.list.label" args="[entityName]" /></h1>
-                    <g:if test="${flash.message}">
-                        <div class="message" role="status">${flash.message}</div>
-                    </g:if>
-                    <f:table collection="${consultationList}" />
+<head>
+    <meta name="layout" content="main"/>
+    <title></title>
+</head>
 
-                    <g:if test="${consultationCount > params.int('max')}">
-                    <div class="pagination">
-                        <g:paginate total="${consultationCount ?: 0}" />
-                    </div>
-                    </g:if>
-                </div>
-            </section>
-        </div>
+<body>
+<table>
+    <thead>
+    <g:sortableColumn property="id" title="#">ID</g:sortableColumn>
+    <th>Desc</th>
+    <th>Status</th>
+    <th>Creator</th>
+    <th>Doctor</th>
+    </thead>
+    <g:each in="${consultationList}" var="consultation">
+        <tr>
+            <td>${consultation.id}</td>
+            <td>${consultation.description}</td>
+            <td>${consultation.status}</td>
+            <td>${consultation.creator}</td>
+            <td>${consultation.doctor}</td>
+        </tr>
+    </g:each>
+</table>
+<g:if test="${consultationCount > params.int('max')}">
+    <div class="pagination">
+        <g:paginate total="${consultationCount ?: 0}" />
     </div>
-    </body>
+</g:if>
+
+</body>
 </html>
