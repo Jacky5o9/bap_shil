@@ -1,7 +1,7 @@
 
 # Objectifs du projet
 
-Vous devez réaliser un projet qui consiste à créer une plateforme équivalente permettant de gérer le parcours médical de patients
+Vous devez réaliser un projet qui consiste à créer une plateforme permettant de gérer le parcours médical de patients
 
 # Les entités
 
@@ -14,9 +14,12 @@ Un **User** sera capable de s'identifier sur la plateforme et pourra créer son 
 ### Rôles
 
 Un **User** pourra avoir un ou des rôles parmi les suivants : PATIENT, NURSE, DOCTOR.
+
 Notez que le rôle DOCTOR autorise toutes les opérations de CRUD sur toutes les entités
+
 Le rôle NURSE autorisera les opérations CREATE / READ / UPDATE sur les consultations
-Un PATIENT ne pourra consulter (READ) que son profil et ses consultations / prescriptions
+
+Un PATIENT pourra uniquement consulter (READ) que son profil et ses consultations / prescriptions
 
 ## Illustration
 
