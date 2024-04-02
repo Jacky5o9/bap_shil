@@ -1,7 +1,7 @@
 
 # Objectifs du projet
 
-Vous devez réaliser un projet qui consiste à créer une plateforme équivalente en terme de fonctionnalités à Reddit
+Vous devez réaliser un projet qui consiste à créer une plateforme équivalente permettant de gérer le parcours médical de patients
 
 # Les entités
 
