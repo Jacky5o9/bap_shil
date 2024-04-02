@@ -1,11 +1,15 @@
 package com.miage.mbds
 
+import grails.plugin.springsecurity.SpringSecurityService
+import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
+@Secured(['ROLE_DOCTOR','ROLE_NURSE'])
 class UserController {
 
     UserService userService
+    SpringSecurityService springSecurityService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -14,7 +18,18 @@ class UserController {
         respond userService.list(params), model:[userCount: userService.count()]
     }
 
+    @Secured(['ROLE_DOCTOR','ROLE_NURSE','ROLE_PATIENT'])
     def show(Long id) {
+        User user = springSecurityService.getCurrentUser()
+        Role rolePatient = Role.findByAuthority('ROLE_PATIENT')
+        def auth = user.getAuthorities()
+        if (auth.contains(rolePatient) && auth.size() == 1)
+        {
+            if (user.getId() != id) {
+                render(status: 403, text: "Vous n'avez pas le droit d'accéder à cette page")
+                return
+            }
+        }
         respond userService.get(id)
     }
 
@@ -70,6 +85,7 @@ class UserController {
         }
     }
 
+    @Secured('ROLE_DOCTOR')
     def delete(Long id) {
         if (id == null) {
             notFound()
