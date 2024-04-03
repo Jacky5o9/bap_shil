@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "5e479286-616e-4856-9ce9-04d6b173be66",
+		"name": "Grails HAITI 24 25",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "928748"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"prmilorme\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER Singleton",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJwcmluY2lwYWwiOiJINHNJQUFBQUFBQUFBSlZTUDA4VVFSUi90eHhCY2dtQ2lTWVcwQWlkMlV1MDh5bzUwY1JzT01KeERTYWF1ZDNIT2pBN004ek13bDFqcnBLQ0FzS2Z4TVN2d0RmUnhnOUFvS0NsdHZYTmNyQ25EWEc2ZmZQYjM3ODNaOWN3YmcyOFRBM2p3b1phNUNtWG9kV0d5OVJpbkJ2dSttRnUwU1RvQ3NTN0F0aWhDZHljU2dDVkNBS2VPSGdVYmJJZFZoZE1wdlZXZHhOajErZ1plS0ZNT21UY01DekRYV1cyd2p2dVdCbjhTNkNrRGw0Rk1MRU9NeXlPVlM3ZHNwSkxQYzBOSnVzd1hjNGlGVy81MGVPWWJsQTZ6b1FkaFU2Z1pGMkJTUVExbHJ2UGlsUTVXZ2NQYjh6bWpvdDZHMTBqZ2dlYVdVdnUva25TZHQ2NnYvYzJKU1hZaGk5UTdla0tIZXB1d1VORHp4TTJsUkNVbWl0cDV6c3lVd25mNEY2YytBZXpSNzhPdmc4NkFRQjE4dnorZjhyNTAwVVkvUGo0ZTY0b3VoSTdlREppdllRMWVwcmN6SlRNYXdhOTh2bTNsZVBUNjcwUFk2VHNFVy8vZngvenI0Zk45WnNxMDh3d3AwWjJSTFM3VmY4U2lIenhmdkxiTGZURE5zKzBRSHBSMG1GeUoxRVNVOXlxVWVLMmJ3ZTExVmEwOU9sTnE3bldXdlhmazlwa1hDaVRJVWxQRmNuOXlzSkkwY0wycnc1L0hqeTdJSnIzTUw3RFJJNVUvSFFKV3M2ekxwcXZaNmV6dFpQTC9TTEc4RW1QL1FFUXgxOWJGZ01BQUE9PSIsInN1YiI6InBybWlsb3JtZSIsInJvbGVzIjpbIlJPTEVfRE9DVE9SIl0sImlzcyI6IlNwcmluZyBTZWN1cml0eSBSRVNUIEdyYWlscyBQbHVnaW4iLCJleHAiOjE3MTIxNjYyNTgsImlhdCI6MTcxMjE2MjY1OH0.1zDkWOwqHPnLetMcA1En-tpOaNdlawTJ1HzIaEOHJWk",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

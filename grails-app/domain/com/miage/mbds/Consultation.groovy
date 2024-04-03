@@ -1,5 +1,8 @@
 package com.miage.mbds
 
+import grails.rest.Resource
+
+@Resource(uri = '/api/consultations')
 class Consultation {
 
     User creator
