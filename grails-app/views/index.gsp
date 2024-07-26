@@ -7,7 +7,7 @@
 <body>
 <content tag="nav">
     <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
+        <a href="/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
 %{--        <ul class="dropdown-menu">--}%
 %{--            <li class="dropdown-item"><a href="#">Home page: ${grails.util.Environment.current.name}</a></li>--}%
 %{--            <li class="dropdown-item"><a href="#">App profile: ${grailsApplication.config.getProperty('grails.profile')}</a></li>--}%
@@ -27,64 +27,49 @@
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
         <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="#">Create user: ${grailsApplication.controllerClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Edit User: ${grailsApplication.domainClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Show User: ${grailsApplication.serviceClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Tag Libraries: ${grailsApplication.tagLibClasses.size()}</a></li>
+            <li class="dropdown-item"><a href="/user/index">Sohw User</a></li>
+            <li class="dropdown-item"><a href="/user/create">Create user</a></li>
+            <li class="dropdown-item"><a href="/user/edit">Edit User</a></li>
         </ul>
     </li>
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consultation <span class="caret"></span></a>
         <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="#">Consultations: ${grailsApplication.controllerClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Make a consultation: ${grailsApplication.domainClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Edit a consultation: ${grailsApplication.serviceClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Show the consultations: ${grailsApplication.tagLibClasses.size()}</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consultation <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="#">Consultations: ${grailsApplication.controllerClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Make a consultation: ${grailsApplication.domainClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Edit a consultation: ${grailsApplication.serviceClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Show the consultations: ${grailsApplication.tagLibClasses.size()}</a></li>
+            <li class="dropdown-item"><a href="/consultation/index">Consultations</a></li>
+            <li class="dropdown-item"><a href="/consultation/create">Make a consultation</a></li>
+            <li class="dropdown-item"><a href="/consultation/edit">Edit a consultation</a></li>
         </ul>
     </li>
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Illustration <span class="caret"></span></a>
         <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="#">Illustrations: ${grailsApplication.controllerClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Upload a Illustration: ${grailsApplication.domainClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Edit a Illustration: ${grailsApplication.serviceClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Show the Illustrations: ${grailsApplication.tagLibClasses.size()}</a></li>
+            <li class="dropdown-item"><a href="/illustration/index">Illustrations</a></li>
+            <li class="dropdown-item"><a href="illustration/create">Upload a Illustration</a></li>
+            <li class="dropdown-item"><a href="illustration/edit">Edit a Illustration</a></li>
         </ul>
     </li>
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Medecine <span class="caret"></span></a>
         <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="#">Medecine: ${grailsApplication.controllerClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Give a Medecine: ${grailsApplication.domainClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Edit a Medecine: ${grailsApplication.serviceClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Show the Medecine: ${grailsApplication.tagLibClasses.size()}</a></li>
+            <li class="dropdown-item"><a href="/medecine/index">Medecines</a></li>
+            <li class="dropdown-item"><a href="/medecine/create">Give a Medecine</a></li>
+            <li class="dropdown-item"><a href="/medecine/edit">Edit a Medecine</a></li>
         </ul>
     </li>
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pathology <span class="caret"></span></a>
         <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="#">Pathology: ${grailsApplication.controllerClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Describe a pathology: ${grailsApplication.domainClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Edit a pathology: ${grailsApplication.serviceClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Show the pathologies: ${grailsApplication.tagLibClasses.size()}</a></li>
+            <li class="dropdown-item"><a href="/pathology/index">Pathologies</a></li>
+            <li class="dropdown-item"><a href="/pathology/create">Describe a pathology</a></li>
+            <li class="dropdown-item"><a href="/pathology/edit">Edit a pathology</a></li>
         </ul>
     </li>
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prescription <span class="caret"></span></a>
         <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="#">Prescription: ${grailsApplication.controllerClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Give a prescription: ${grailsApplication.domainClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Edit a prescription: ${grailsApplication.serviceClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Show the prescriptions: ${grailsApplication.tagLibClasses.size()}</a></li>
+            <li class="dropdown-item"><a href="/prescription/index">Prescriptions</a></li>
+            <li class="dropdown-item"><a href="/prescription/create">Give a prescription</a></li>
+            <li class="dropdown-item"><a href="prescription/edit">Edit a prescription</a></li>
         </ul>
     </li>
     <li class="dropdown">

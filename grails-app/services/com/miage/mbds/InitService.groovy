@@ -10,19 +10,19 @@ class InitService {
         def patientRole = new Role(authority: 'ROLE_PATIENT').save()
         // Création d'un utilisateur de type "PATIENT"
         def patientInstance = new User(firstname: "Baudelaire", lastname: "Balthazar",
-                username: "bbalthazar", password: "password", dob: new Date(), weight: 60,
+                username: "jpierre", password: "jpierre", dob: new Date(), weight: 60,
                 illustration: new Illustration(name: "grails.svg")).save()
         UserRole.create(patientInstance, patientRole, true)
 
         def nurseRole = new Role(authority: 'ROLE_NURSE').save()
         def nurseInstance = new User(firstname: "Rodely", lastname: "Douilly",
-                username: "rdouilly", password: "password", dob: new Date(), weight: 65,
+                username: "sabeon", password: "sabeon", dob: new Date(), weight: 65,
                 illustration: new Illustration(name: "grails.svg")).save()
         UserRole.create(nurseInstance, nurseRole, true)
 
         def doctorRole = new Role(authority:  'ROLE_DOCTOR').save()
         def doctorInstance = new User(firstname: "Pierre Rubens", lastname: "Milorme",
-                username: "prmilorme", password: "password", dob: new Date(), weight: 62,
+                username: "jbaptiste", password: "jbaptiste", dob: new Date(), weight: 62,
                 illustration: new Illustration(name: "grails.svg")).save()
         UserRole.create(doctorInstance, doctorRole, true)
 
