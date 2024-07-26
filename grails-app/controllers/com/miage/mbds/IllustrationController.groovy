@@ -1,8 +1,10 @@
 package com.miage.mbds
 
+import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
+@Secured(['ROLE_DOCTOR'])
 class IllustrationController {
 
     IllustrationService illustrationService

@@ -32,7 +32,7 @@ pre {
 }
 
 .navbar-dark a {
-    color: #ffffff !important;
+    color: #08A045 !important;
     font-size: 18px !important;
     text-decoration: none;
 }
@@ -41,7 +41,7 @@ pre {
 
 }
 .navbar-dark, .navbar-static-top {
-    background-color: #424649;
+    background-color: #ffffff;
     border: 0px;
 }
 a.navbar-brand {
