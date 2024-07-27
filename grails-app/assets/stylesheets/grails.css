@@ -29,12 +29,19 @@ pre {
 /* customizing bootstrap nav bar */
 .navbar {
     margin-bottom: 0px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    z-index: 1000;
 }
 
 .navbar-dark a {
     color: #08A045 !important;
     font-size: 18px !important;
     text-decoration: none;
+    font-weight: bold;
 }
 .grails-icon img {
     width: 40px;
@@ -680,6 +687,25 @@ h8 {
     padding-bottom: 5px
 }
 
+#menu{
+    padding-top: 40px;
+    width: 10%;
+    margin: 10px;
+}
+
+#menu a{
+    display: block;
+    padding: 12px;
+    color: #08A045;
+    font-weight: bold;
+    text-align: center;
+}
+
+#menu a:hover{
+    background-color: #2559a7;
+    color: white;
+}
+
 #content .colset-3-article article {
     float: left;
     width: 29%;
@@ -1006,6 +1032,8 @@ html, body, .st-container, .st-pusher, .st-content {
 .st-effect-9.st-menu::after {
     display: none
 }
+
+
 
 /* Video from the learn page */
 .presentations {
